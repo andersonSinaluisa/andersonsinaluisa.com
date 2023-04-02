@@ -11,6 +11,7 @@ export interface Props {
   title?: string;
   subtitle?: string;
   highlight?: string;
+  titleItem?: string;
   items: Array<Array<Item>>;
 }
 
@@ -19,6 +20,7 @@ const {
   subtitle = await Astro.slots.render('subtitle'),
   highlight,
   items = [],
+  titleItem = await Astro.slots.render('titleItem'),
 } = Astro.props;
 ---
 
@@ -43,10 +45,22 @@ const {
           {subtitle && (
             <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
           )}
+          
         </div>
       )
     }
-    <div class="grid mx-auto space-y-6 md:grid-cols-2 md:space-y-0">
+     <div class="mb-10 md:mx-auto text-center md:mb-12 max-w-3xl">
+      {titleItem && (
+       
+        <h2
+                class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                set:html={titleItem}
+              />
+        )}
+     </div>
+     
+    <div class="grid mx-auto space-y-6 md:grid-cols-5 md:space-y-0">
+     
       {
         items.map((subitems) => (
           <div class="space-y-8 sm:px-8">

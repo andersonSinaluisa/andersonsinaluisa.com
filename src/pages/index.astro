@@ -24,22 +24,22 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction={{ text: 'Contactar', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:message-circle' }}
+    callToAction2={{ text: 'Ver más', href: '#features' }}
+    image={{ src: import('~/assets/images/anderson.jpg'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden"/> with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
+       Programador Fullstack 
+      
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0 +
-        Tailwind CSS.</span
+        <span class="font-semibold">con experiencia en el desarrollo web</span> 
+        en el frontend como en el backend</span
       >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
+      <span class="block mb-1 sm:hidden font-bold text-blue-600"> así como en la creación de aplicaciones móviles nativas e híbridas. </span> 
+      Con +2 años de experiencia
     </Fragment>
   </Hero>
 
@@ -49,51 +49,159 @@ const meta = {
 
   <!-- Features Widget *************** -->
 
+  
   <Features
-    highlight="Features"
-    title="What you get with AstroWind"
-    subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+    highlight="Información"
+    title="¿Quien es Anderson Sinaluisa?"
+    subtitle={`Ecuatoriano, 22 años. Desarrollador de software, apasionado por la tecnología y la programación.
+    Me gusta aprender cosas nuevas y me gusta mucho el trabajo en equipo. Me gusta mucho el desarrollo de software en general, pero me especializo en el desarrollo web y móvil.
+    en este sitio web encontrarás información detallada sobre mis habilidades, experiencia laboral y proyectos en los que he trabajado. Espero que al navegar por mi sitio web puedas conocer más acerca de mi trabajo y cómo puedo ayudarte a llevar a cabo tus proyectos.`}
+    titleItem="Habilidades"
     items={[
       [
         {
-          title: 'Astro + Tailwind CSS Integration',
-          description:
-            'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-          icon: 'tabler:brand-tailwind',
+          title:'Frontend',
+          description: '',
+          icon:'gg:browser'
         },
         {
-          title: 'Ready-to-use Components',
-          description:
-            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-          icon: 'tabler:components',
+          title: 'HTML',
+          description: 'HTML5',
+          icon: 'akar-icons:html-fill',
         },
         {
-          title: 'Best Practices',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:list-check',
+          title: 'CSS',
+          description: 'CSS3',
+          icon: 'akar-icons:css-fill',
         },
+        {
+          title: 'JavaScript',
+          description: 'JavaScript',
+          icon: 'akar-icons:javascript-fill',
+        },
+        {
+          title:'React',
+          description: 'React js',
+          icon:'logos:react'
+        },
+        {
+          title: 'Angular',
+          description: 'Angular',
+          icon: 'logos:angular-icon',
+        }
       ],
       [
         {
-          title: 'Excellent Page Speed',
-          description:
-            'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-          icon: 'tabler:rocket',
+          title: 'Backend',
+          description: '',
+          icon: 'mdi:server',
         },
         {
-          title: 'Search Engine Optimization (SEO)',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:arrows-right-left',
+          title: 'Node js',
+          description: 'Express js',
+          icon: 'logos:nodejs-icon',
+        },
+        
+        {
+          title: 'PHP',
+          description: 'Laravel',
+          icon: 'logos:php',
         },
         {
-          title: 'Open to new ideas and contributions',
-          description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:bulb',
+          title: 'Python',
+          description: 'Django, Flask',
+          icon: 'logos:python',
         },
+        {
+          title: 'Java',
+          description: 'Spring Boot',
+          icon: 'logos:java',
+        },
+        
       ],
+      [
+        {
+          title: 'Base de datos',
+          description: '',
+          icon: 'mdi:database',
+        },
+        {
+          title: 'MySQL',
+          description: 'MySQL',
+          icon: 'logos:mysql',
+        },
+        {
+          title: 'MongoDB',
+          description: 'MongoDB',
+          icon: 'logos:mongodb',
+        },
+        {
+          title: 'PostgreSQL',
+          description: 'PostgreSQL',
+          icon: 'logos:postgresql',
+        },
+        {
+          title: 'Firebase',
+          description: 'Firebase',
+          icon: 'logos:firebase',
+        
+        }
+      ],
+      [
+        {
+          title: 'Mobile',
+          description: '',
+          icon: 'mdi:cellphone',
+        },
+        {
+          title: 'Android',
+          description: 'Java',
+          icon: 'logos:android-icon',
+        },
+        {
+          title: 'Ionic',
+          description: 'Ionic',
+          icon: 'logos:ionic',
+        },
+        {
+          title: 'React Native',
+          description: 'React Native',
+          icon: 'logos:react',
+        },
+        {
+          title: 'Flutter',
+          description: 'Flutter',
+          icon: 'logos:flutter',
+        }
+      ],
+      [
+        {
+          title: 'Otros',
+          description: '',
+          icon: 'mdi:code-tags',
+        },
+        {
+          title: 'Git',
+          description: 'Git',
+          icon: 'logos:git-icon',
+        },
+        {
+          title: 'GitHub',
+          description: 'GitHub',
+          icon: 'logos:github-icon',
+        },
+        {
+          title: 'GitLab',
+          description: 'GitLab',
+          icon: 'logos:gitlab',
+        },
+        {
+          title: 'Docker',
+          description: 'Docker',
+          icon: 'logos:docker-icon',
+        }
+      
+      ]
     ]}
   />
 
@@ -199,64 +307,32 @@ const meta = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    highlight="Components"
+    title="Certificaciones y cursos"
+    subtitle=""
+    highlight=""
     items={[
       {
-        title: 'Headers',
-        description:
-          'In general, Headers contain information that makes it easier for visitors to interact with the website.',
-        icon: 'flat-color-icons:template',
+        title: 'Curso de Java: Backend con Spring Boot',
+        description: '<span>Platzi</span> <br/> <a href="https://platzi.com/p/asinaluisa/curso/2317-spring-boot/diploma/detalle/" target="_blank"> Ver certificado</a>',
+        icon: 'logos:java',
       },
       {
-        title: 'Heros',
-        description:
-          'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
-        icon: 'flat-color-icons:gallery',
+        title: ' Curso de Desarrollo en Laravel con Test Driven Development',
+        description:'<span>Platzi</span> <br/><a href="https://platzi.com/p/asinaluisa/curso/2187-laravel-tdd/diploma/detalle/" target="_blank"> Ver certificado</a>',
+        icon: 'logos:laravel',
       },
       {
-        title: 'Features',
-        description:
-          'Display your product in action and how the Features actually create a solution for your target customer.',
-        icon: 'flat-color-icons:todo-list',
+        title: 'Curso de Introducción al Pentesting',
+        description:'<span>Platzi</span> <br/><a href="https://platzi.com/p/asinaluisa/curso/2684-intro-pentesting/diploma/detalle/" target="_blank"> Ver certificado</a>',
+        icon: 'mdi:security',
       },
       {
-        title: 'Content',
+        title: 'Curso de Flutter',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:document',
+          '<span>Platzi</span> <br/><a href="https://platzi.com/p/asinaluisa/curso/1386-flutter/diploma/detalle/" target="_blank"> Ver certificado</a>',
+        icon: 'logos:flutter',
       },
-      {
-        title: 'Call-to-Action',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'icon-park:page-template',
-      },
+      
     ]}
   />
 
