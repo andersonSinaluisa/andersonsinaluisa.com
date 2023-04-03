@@ -1,7 +1,7 @@
 ---
 import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
-
+import { Icon } from 'astro-icon';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
@@ -29,16 +29,18 @@ const meta = {
     image={{ src: import('~/assets/images/anderson.jpg'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-       Programador Fullstack 
-      
+      Anderson Sinaluisa,
+      <br />
+    </Fragment>
+    <Fragment slot="title">
+      Desarrollador de software
+      <br />
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">con experiencia en el desarrollo web</span> 
-        en el frontend como en el backend</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600"> así como en la creación de aplicaciones móviles nativas e híbridas. </span> 
+      <span class="hidden sm:inline">con experiencia en el desarrollo web</span>
+     
+      y aplicaciones móviles <br/>
       Con +2 años de experiencia
     </Fragment>
   </Hero>
@@ -49,7 +51,6 @@ const meta = {
 
   <!-- Features Widget *************** -->
 
-  
   <Features
     highlight="Información"
     title="¿Quien es Anderson Sinaluisa?"
@@ -60,9 +61,9 @@ const meta = {
     items={[
       [
         {
-          title:'Frontend',
+          title: 'Frontend',
           description: '',
-          icon:'gg:browser'
+          icon: 'gg:browser',
         },
         {
           title: 'HTML',
@@ -80,15 +81,15 @@ const meta = {
           icon: 'akar-icons:javascript-fill',
         },
         {
-          title:'React',
+          title: 'React',
           description: 'React js',
-          icon:'logos:react'
+          icon: 'logos:react',
         },
         {
           title: 'Angular',
           description: 'Angular',
           icon: 'logos:angular-icon',
-        }
+        },
       ],
       [
         {
@@ -101,7 +102,7 @@ const meta = {
           description: 'Express js',
           icon: 'logos:nodejs-icon',
         },
-        
+
         {
           title: 'PHP',
           description: 'Laravel',
@@ -117,7 +118,6 @@ const meta = {
           description: 'Spring Boot',
           icon: 'logos:java',
         },
-        
       ],
       [
         {
@@ -144,8 +144,7 @@ const meta = {
           title: 'Firebase',
           description: 'Firebase',
           icon: 'logos:firebase',
-        
-        }
+        },
       ],
       [
         {
@@ -172,7 +171,7 @@ const meta = {
           title: 'Flutter',
           description: 'Flutter',
           icon: 'logos:flutter',
-        }
+        },
       ],
       [
         {
@@ -199,43 +198,98 @@ const meta = {
           title: 'Docker',
           description: 'Docker',
           icon: 'logos:docker-icon',
-        }
-      
-      ]
+        },
+      ],
     ]}
   />
 
   <!-- Content Widget **************** -->
 
   <Content
-    highlight="Inside template"
-    title="And what's inside? ..."
+    highlight=""
+    title="Proyectos"
+    subtitle="Aquí encontrarás algunos de los proyectos en los que he trabajado como programador Fullstack. Desde aplicaciones web hasta móviles, estos proyectos representan mi experiencia y habilidades en el campo del desarrollo web. Echa un vistazo a algunos de ellos y siéntete libre de contactarme si tienes alguna pregunta o si te gustaría discutir cómo puedo ayudarte a hacer realidad tu próximo proyecto."
     items={[
+      /*Detecta el plagio en documentos: La característica principal de WordMatch es que detecta plagio en documentos. Al permitir a los usuarios comparar sus documentos con otros textos, WordMatch puede detectar cualquier similitud y mostrar el porcentaje de plagio.
+
+Fácil de usar: Según la descripción que me diste, WordMatch parece ser fácil de usar. Al permitir a los usuarios subir sus documentos y realizar una comparación simple, es una herramienta que cualquier persona puede usar sin dificultad.
+
+Proporciona un informe detallado: Además de detectar el plagio, WordMatch también proporciona un informe detallado de los resultados. Esto significa que los usuarios pueden ver exactamente qué partes de su documento se consideran plagio y, por lo tanto, hacer las correcciones necesarias para evitar problemas de plagio en el futuro.*/
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Detecta el plagio en documentos',
         description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+          'La característica principal de WordMatch es que detecta plagio en documentos. Al permitir a los usuarios comparar sus documentos con otros textos, WordMatch puede detectar cualquier similitud y mostrar el porcentaje de plagio.',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Fácil de usar',
         description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+          'WordMatch parece ser fácil de usar. Al permitir a los usuarios subir sus documentos y realizar una comparación simple, es una herramienta que cualquier persona puede usar sin dificultad.',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Proporciona un informe detallado',
         description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+          'Además de detectar el plagio, WordMatch también proporciona un informe detallado de los resultados. Esto significa que los usuarios pueden ver exactamente qué partes de su documento se consideran plagio y, por lo tanto, hacer las correcciones necesarias para evitar problemas de plagio en el futuro.',
       },
     ]}
-    image={{
-      src: import('~/assets/images/caos.jpg'),
+    image={[
+      {
+      src: import('~/assets/images/logo_wordmatch.png'),
       alt: 'Colorful Image',
-    }}
+      
+      },
+      {
+        src: import('~/assets/images/wordmatch.png'),
+        alt: 'Colorful Image',
+      }
+    ]}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
-      Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
-      tacimates.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">WordMatch</h3>
+      ¡WordMatch está aquí para ayudarte! Con nuestra aplicación web, podrás subir tus documentos y compararlos con otros
+      textos para detectar cualquier porcentaje de plagio. Nuestro proceso de comparación es fácil de usar y preciso, y te
+      proporcionará un informe detallado de los resultados. ¡No te arriesgues a ser acusado de plagio! Utiliza WordMatch
+      para asegurarte de que tu trabajo es original y único. ¡Prueba WordMatch hoy mismo!
+    </Fragment>
+
+    <Fragment slot="actions">
+    
+      <div class="flex flex-row">
+        <div class="flex flex-row max-w-md">
+          <div class="mb-4 mr-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-white">
+              <Icon name="logos:javascript" class="w-6 h-6 text-white icon-light" />
+            </div>
+          </div>
+          <div class="mb-4 mr-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-white">
+              <Icon name="logos:react" class="w-6 h-6 text-white icon-light" />
+            </div>
+          </div>
+          
+          <div class="mb-4 mr-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-white">
+              <Icon name="logos:python" class="w-6 h-6 text-white icon-light" />
+            </div>
+          </div>
+          <div class="mb-4 mr-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary dark:bg-white">
+              <Icon name="logos:django" class="w-6 h-6 text-white icon-light" />
+            </div>
+          </div>
+          <div class="mb-4 mr-4">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-white">
+              <Icon name="logos:postgresql" class="w-6 h-6 text-white icon-light" />
+            </div>
+          </div>
+          
+        </div>
+      
+        
+  
+      </div>
+      <div class="flex flex-row">
+        <a href="https://github.com/andersonSinaluisa/SAP" target="_blank" class="btn btn-primary sm:mb-0"> Visitar</a>
+      </div>
     </Fragment>
   </Content>
 
@@ -313,17 +367,20 @@ const meta = {
     items={[
       {
         title: 'Curso de Java: Backend con Spring Boot',
-        description: '<span>Platzi</span> <br/> <a href="https://platzi.com/p/asinaluisa/curso/2317-spring-boot/diploma/detalle/" target="_blank"> Ver certificado</a>',
+        description:
+          '<span>Platzi</span> <br/> <a href="https://platzi.com/p/asinaluisa/curso/2317-spring-boot/diploma/detalle/" target="_blank"> Ver certificado</a>',
         icon: 'logos:java',
       },
       {
         title: ' Curso de Desarrollo en Laravel con Test Driven Development',
-        description:'<span>Platzi</span> <br/><a href="https://platzi.com/p/asinaluisa/curso/2187-laravel-tdd/diploma/detalle/" target="_blank"> Ver certificado</a>',
+        description:
+          '<span>Platzi</span> <br/><a href="https://platzi.com/p/asinaluisa/curso/2187-laravel-tdd/diploma/detalle/" target="_blank"> Ver certificado</a>',
         icon: 'logos:laravel',
       },
       {
         title: 'Curso de Introducción al Pentesting',
-        description:'<span>Platzi</span> <br/><a href="https://platzi.com/p/asinaluisa/curso/2684-intro-pentesting/diploma/detalle/" target="_blank"> Ver certificado</a>',
+        description:
+          '<span>Platzi</span> <br/><a href="https://platzi.com/p/asinaluisa/curso/2684-intro-pentesting/diploma/detalle/" target="_blank"> Ver certificado</a>',
         icon: 'mdi:security',
       },
       {
@@ -332,7 +389,6 @@ const meta = {
           '<span>Platzi</span> <br/><a href="https://platzi.com/p/asinaluisa/curso/1386-flutter/diploma/detalle/" target="_blank"> Ver certificado</a>',
         icon: 'logos:flutter',
       },
-      
     ]}
   />
 
