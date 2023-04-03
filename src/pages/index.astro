@@ -10,7 +10,6 @@ import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const meta = {
@@ -24,7 +23,7 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Contactar', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:message-circle' }}
+    callToAction={{ text: 'Contactar', href: 'mailto:andersonsinaluisa@gmail.com', icon: 'tabler:message-circle' }}
     callToAction2={{ text: 'Ver más', href: '#features' }}
     image={{ src: import('~/assets/images/anderson.jpg'), alt: 'AstroWind Hero Image' }}
   >
@@ -287,6 +286,7 @@ Proporciona un informe detallado: Además de detectar el plagio, WordMatch tambi
         
   
       </div>
+      
       <div class="flex flex-row">
         <a href="https://github.com/andersonSinaluisa/SAP" target="_blank" class="btn btn-primary sm:mb-0"> Visitar</a>
       </div>
@@ -296,60 +296,136 @@ Proporciona un informe detallado: Además de detectar el plagio, WordMatch tambi
   <!-- Content Widget **************** -->
 
   <Content
-    isReversed
-    isAfterContent
+    
+    
+    title={""}
+    subtitle={``}
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Accesibilidad: ',
+        description:'La plataforma te permitirá acceder a tus archivos desde cualquier lugar y en cualquier momento, siempre y cuando tengas conexión a internet. Ya no tendrás que preocuparte por tener tus archivos en distintos dispositivos o por perderlos.'
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Organización:',
+        description:' La aplicación te permitirá organizar tus archivos en carpetas personalizadas, lo que facilitará su gestión y búsqueda. Podrás crear tantas carpetas como necesites y mover tus archivos entre ellas de manera sencilla.'
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Seguridad:',
+        description:' La seguridad de tus archivos es una de nuestras principales preocupaciones. La aplicación cuenta con medidas de seguridad avanzadas, como encriptación de datos, para asegurar que tus archivos estén protegidos.'
       },
-      {
-        title: 'Per ei quaeque sensibus',
-      },
-      {
-        title: 'Cu imperdiet posidonium sed',
-      },
-      {
-        title: 'Nulla omittam sadipscing mel ne',
-      },
+     
     ]}
-    image={{
-      src: import('~/assets/images/vintage.jpg'),
+    image={[
+
+      {
+        
+      src: import('~/assets/images/files_reader.png'),
       alt: 'Vintage Image',
-    }}
-  />
+      },
+      {
+        src: import('~/assets/images/file-system.png'),
+        alt: 'Colorful Image',
+      }
+    ]}
+  >
+
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">FilesReader</h3>
+    aplicación web que desarrollé para gestionar mis archivos personales. Con ella, podrás tener un control total de todos tus archivos, desde fotos y videos hasta documentos importantes.
+
+    La plataforma te permitirá subir tus archivos, organizarlos en carpetas y acceder a ellos en cualquier momento y desde cualquier lugar. Además, la seguridad es una de las principales preocupaciones, por lo que puedes estar seguro de que tus archivos estarán protegidos.
+    
+    Esta herramienta me ha sido muy útil en mi día a día, y espero que también pueda serlo para ti. Si te interesa probarla, no dudes en contactarme para que pueda brindarte más información.
+  </Fragment>
+
+  <Fragment slot="actions">
+    
+    <div class="flex flex-row sm:flex-col">
+      <div class="flex flex-row max-w-md">
+        <div class="mb-4 mr-4">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-white">
+            <Icon name="logos:typescript-icon" class="w-6 h-6 text-white icon-light" />
+          </div>
+        </div>
+        <div class="mb-4 mr-4">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full bg-secondary dark:bg-white">
+            <Icon name="logos:angular-icon" class="w-6 h-6 text-white icon-light" />
+          </div>
+        </div>
+      
+        <div class="mb-4 mr-4">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-white">
+            <Icon name="logos:java" class="w-6 h-6 text-white icon-light" />
+          </div>
+        </div>
+        <div class="mb-4 mr-4">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-white">
+            <Icon name="logos:spring-icon" class="w-6 h-6 text-white icon-light" />
+          </div>
+        </div>
+        
+        <div class="mb-4 mr-4">
+          <div class="flex items-center justify-center w-12 h-12 rounded-full bg-primary dark:bg-white">
+            <Icon name="logos:mysql" class="w-6 h-6 text-white icon-light" />
+          </div>
+        </div>
+        
+        
+      </div>
+    
+      
+
+    </div>
+    <div class="flex flex-row ">
+      <a href="https://github.com/andersonSinaluisa/filesreader" target="_blank" class="btn btn-primary sm:mb-0"> Visitar</a>
+    </div>
+  </Fragment>
+  </Content>
+
+  <!-- boton de ver mas en github -->
+
+  <div class="flex flex-row justify-center">
+    <a href="https://github.com/andersonSinaluisa"
+      target="_blank"
+      class="btn btn-primary sm:mb-0">
+      Ver más
+      <Icon name="logos:github-icon" class="w-6 h-6 text-white icon-light" />
+      
+    </a>
+  </div>
+
 
   <!-- Steps Widget ****************** -->
-
+  
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="¿Cómo creo mis proyectos: mi proceso paso a paso"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Definir la idea del proyecto</span>',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula.',
-        icon: 'tabler:package',
+          'Identifica claramente el objetivo que quieres lograr con tu proyecto de software y cómo este puede ayudar a resolver un problema o necesidad específica.',
+        icon: 'carbon:idea',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
+        title: 'Step 2: <span class="font-medium">Establece los requisitos del proyecto</em>',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
-        icon: 'tabler:letter-case',
+          'Una vez definida la idea, establece los requisitos necesarios para alcanzar el objetivo del proyecto. Considera aspectos como funcionalidad, diseño, seguridad, tecnologías necesarias, entre otros.',
+        icon: 'codicon:checklist',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Diseña la arquitectura del software</span>',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
-        icon: 'tabler:paint',
+          'Elabora una estructura clara del software, definiendo la relación entre los diferentes componentes y cómo interactúan entre sí.',
+        icon: 'ic:baseline-layers',
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        title: 'Step 4: <span class="font-medium">Selecciona las herramientas y tecnologías</span>',
+        description:' Selecciona las herramientas y tecnologías necesarias para el desarrollo del proyecto, de acuerdo con los requisitos establecidos en el paso 2.',
+        icon: 'tabler:circle-check',
+      },
+      {
+        title: 'Happy Coding! <span class="font-medium">:)</span>',
+        icon: 'carbon:code',
       },
     ]}
     image={{
@@ -360,6 +436,59 @@ Proporciona un informe detallado: Además de detectar el plagio, WordMatch tambi
 
   <!-- Features2 Widget ************** -->
 
+
+  <Steps
+    title="Experiencia en el desarrollo de software"
+
+    items={[
+      {
+        title: 'PROGRAMADOR WEB (freelance)',
+        description:
+          `Fundación de ayuda por internet | agosto 2020 - diciembre 2020 <br/>
+          <ul class="list-disc list-inside"> 
+            <li>Crear modelado Base de datos</li>
+            <li>implementar arquitectura MVC en el backend</li>
+            <li>Documentación del codigo</li>
+          </ul>`,
+        icon: 'tabler:world',
+      },
+      {
+        title: 'PROGRAMADOR SEMI-SENIOR (relación laboral)',
+        description:
+          `SIAPE S.A | febrero 2021 – noviembre 2022 <br/>
+          <ul class="list-disc list-inside"> 
+            <li>Desarrollo en backend (python)</li>
+            <li>Desarrollo frontend (React js)</li>
+            <li>Desarrollo plugin wordpress (PHP)</li>
+            <li>Documentación del código</li>
+          `,
+        icon: 'ic:round-code',
+      },
+      {
+        title: 'PROGRAMADOR ANDROID (freelance)',
+        description:
+          `Pharmacy & Nutrition | junio 2021 - septiembre 2022 <br/>
+          <ul class="list-disc list-inside"> 
+            <li>Desarrollo de Aplicación Móvil</li>
+            <li>Implementación de arquitectura MVP (modelo, vista, presentador)</li>
+            <li>Documentación del código</li>
+          </ul>`,
+        icon: 'tabler:brand-android',
+      },
+      {
+        title: 'PROGRAMADOR BACKEND (freelance)',
+        description:`6 Sigma Group | noviembre 2022 - actualidad <br/> 
+        <ul class="list-disc list-inside"> 
+          <li>Desarrollo back-end (php)</li>
+          <li>Pruebas unitarias</li>
+          <li>Documentación del código</li>
+        </ul>
+        `,
+        icon: 'tabler:api',
+      }
+    ]}
+    
+  />
   <Features2
     title="Certificaciones y cursos"
     subtitle=""
@@ -395,58 +524,54 @@ Proporciona un informe detallado: Además de detectar el plagio, WordMatch tambi
   <!-- HighlightedPosts Widget ******* -->
 
   <LatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-			Astro is a very interesting technology. Thanks.
+    title="Entradas recientes"
+    information={`
+      <p class="text-gray-500 dark:text-gray-400">
+        Aquí encontrarás las últimas entradas de mi blog.
+      </p>
 		`}
-    postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
-    ]}
+    
   />
 
   <!-- FAQs Widget ******************* -->
 
   <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+    title="Preguntas Frecuentes"
+    subtitle="Preguntas frecuentes sobre mi trabajo"
     highlight="FAQs"
     items={[
       [
         {
-          question: 'What do I need to start?',
+          question: '¿Cómo puedo contactarte para solicitar tus servicios de desarrollo de software?',
           answer:
-            'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+            'Puedes contactarme a través del formulario de contacto en mi sitio web o enviándome un correo electrónico a la dirección que aparece en mi perfil de contacto.',
         },
         {
-          question: 'How to install the Astro + Tailwind CSS template?',
+          question: '¿Cuál es tu experiencia previa en el desarrollo de software?',
           answer:
-            "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
+            "Tengo una experiencia de más de 2 años en el desarrollo de software, durante los cuales he trabajado en diversos proyectos de diferentes tamaños y complejidades.",
         },
         {
-          question: "What's something that you don't understand?",
+          question: "¿Puedes darme ejemplos de proyectos que hayas creado en el pasado?",
           answer:
-            "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+            "Claro que sí. Algunos de los proyectos que he creado en el pasado incluyen un sistema de gestion academica, una aplicación de gestión de inventario, una aplicación de gestión de citas médicas, aplicaciòn para denuncias anónimas, cotizacion de joyas, planificacion de visitas, entre otros.",
         },
       ],
       [
         {
-          question: "What's an example of when you changed your mind?",
+          question: "¿Cuál es tu proceso de trabajo para el desarrollo de software?",
           answer:
-            "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+            "Mi proceso de trabajo comienza por entender las necesidades y objetivos del cliente y luego crear un plan de proyecto detallado. Durante el proceso de desarrollo, mantengo una comunicación constante con el cliente para asegurarme de que el proyecto se está desarrollando de acuerdo con sus expectativas y necesidades.",
         },
         {
-          question: 'What is something that you would like to try again?',
+          question: '¿En qué lenguajes de programación y tecnologías estás especializado?',
           answer:
-            "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+            "Estoy especializado en lenguajes de programación como Python, JavaScript, PHP y tecnologías como Django, Flask, React, Angular, entre otras.",
         },
         {
-          question: 'If you could only ask one question to each person you meet, what would that question be?',
+          question: '¿Cómo garantizas la calidad del software que creas?',
           answer:
-            "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+            "Para garantizar la calidad del software que creo, utilizo herramientas de prueba y depuración de código, y pruebas de usuario para asegurarme de que el software cumpla con los requisitos y objetivos del cliente.",
         },
       ],
     ]}
@@ -454,31 +579,27 @@ Proporciona un informe detallado: Además de detectar el plagio, WordMatch tambi
 
   <!-- Stats Widget ****************** -->
 
-  <Stats
-    items={[
-      { name: 'Downloads', value: '132K' },
-      { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
-    ]}
-  />
+
 
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: 'Contáctame',
+      href: 'mailto:andersonsinaluisa@gmail.com',
+      icon: 'tabler:mail',
     }}
   >
     <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Contáctame<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">
+
+
+      </span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Creemos juntos tu proyecto de software
+
     </Fragment>
   </CallToAction>
 </Layout>
